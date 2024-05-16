@@ -10,52 +10,41 @@
     </style>
     <body>
         <div class="topnav">
-            <a class="active" href="index.html">Főoldal</a>
+            <a href="index.html">Főoldal</a>
             <a href="pizzas.html">Pizzáink</a>
             <a href="discounts.html">Akciók</a>
             <a href="contact.html">Kapcsolat</a>
             <a href="about.html">Rólunk</a>
-            <a href="register.html">Regisztráció</a>
+            <a class="active" href="register.html">Regisztráció</a>
             <a href="login.html">Bejelentkezés</a>
             <a class="locked_button disable-links" href="#cart.html"><p class="locked_button disable-links">Kosár</p></a>
             <a style="float: right;"href="aggreement.html">Szerződési Feltételek</a>
         </div>
-        <h1 style="font-size:10vw; text-align: center;">Buci Pizzázó</h1>
-        <h1 style="font-size:2vw; text-align: center;">A Pizzák Ásza</h1>
-
-        <h3 style="font-size:2vw; text-align: center;">Nyitvatartás:</h2>
         
-        <div>
-            <table>
-                <tr>
-                    <td colspan="7" style="text-align: center;">Nyitvatartás</td>  
-                </tr>
-                <tr>
-                    <td>Hé</td>
-                    <td>Ke</td>
-                    <td>Sze</td>
-                    <td>Csü</td>
-                    <td>Pé</td>
-                    <td>Szo</td>
-                    <td>V</td>
-                </tr>
-                <tr>
-                    <td>8:00-20:00</td>
-                    <td>8:00-20:00</td>
-                    <td>8:00-20:00</td>
-                    <td>8:00-20:00</td>
-                    <td>8:00-20:00</td>
-                    <td>8:00-14:00</td>
-                    <td>8:00-12:00</td>
-                </tr>
-            </table>
-        </div>
-
-        <h3 style="font-size:2vw; text-align: center;">Népszerű pizzáink:</h2>
-
-        <div id="card_container">
-            <div id="card_with_data"></div>
-        </div>
+        <form action="action_page.php">
+            <div class="container">
+              <h3>Regisztráció</h3>
+              <p>Kérem töltse ki ezt az űrlapot a regisztráláshoz.</p>
+              <hr>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Email Cím" name="email" id="email" required>
+          
+              <label for="psw"><b>Jelszó</b></label>
+              <input type="password" placeholder="Jelszó" name="psw" id="psw" required>
+          
+              <label for="psw-repeat"><b>Jelszó Ismétlése</b></label>
+              <input type="password" placeholder="Jelszó Ismétlése" name="psw-repeat" id="psw-repeat" required>
+              <hr>
+          
+              <p>A fiók léterhozásával elfogadásra kerülnek a <a href="aggreement.html">Szerződési Feltételek.</a>.</p>
+              <button type="submit" class="registerbtn">Regisztrál</button>
+            </div>
+          
+            <div class="container signin">
+              <p>Már van fiókja? <a href="login.html">Jelentkezzen be</a>.</p>
+            </div>
+          </form>
 
         <footer class="footer">
             <a href="https://www.youtube.com"><img src="gfx/logo/youtube.png" width="40" heigth="40" title="YouTube Csatornánk" alt="YouTube Csatornánk"></a>

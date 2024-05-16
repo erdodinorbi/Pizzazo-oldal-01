@@ -15,6 +15,8 @@ function sendRequest(url) {
                     <p class="card-text">Minimum éjszakák: ${adatok[i].minimum_nights}</p>
                     <p class="card-text">Honlap: ${adatok[i].hostname}</p>
                     <p class="card-text">Éjszaka / fő: ${adatok[i].price} Ft</p>
+                    <hr>
+                    <button class="kosarba">Kosárba</button>
                 </div>
             </div>`;
             }

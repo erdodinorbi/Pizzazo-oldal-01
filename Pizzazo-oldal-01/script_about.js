@@ -1,71 +1,40 @@
-function sendRequest(url) {
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if(xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr);
-            console.log(JSON.parse(xhr.responseText));
-            let adatok = JSON.parse(xhr.responseText);
-            let contentHTML = document.getElementById("card_with_data");
-            for(let i = 0; i < adatok.length; i++) 
-            {
-                contentHTML.innerHTML += `<div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${adatok[i].name}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">${adatok[i].location}</h5>
-                    <p class="card-text">Minimum éjszakák: ${adatok[i].minimum_nights}</p>
-                    <p class="card-text">Honlap: ${adatok[i].hostname}</p>
-                    <p class="card-text">Éjszaka / fő: ${adatok[i].price} Ft</p>
-                </div>
-            </div>`;
-            }
-        }
-    };
-    xhr.open("GET", url);
-    xhr.setRequestHeader('content-type', 'application/json');
-    xhr.send();
+class Munkatars {
+    constructor(nev, beosztas, email, kep) {
+      this.nev = nev;
+      this.beosztas = beosztas;
+      this.email = email;
+      this.kep = kep;
+    }
 }
 
-//sendRequest("https://www.nodejs.sulla.hu/data");
+let munkatarsak = [];
 
-console.log(1 == "1");//a kettő egyenlőségjel a karaktert nézi nem a típust, illetve nézi a typust de automatikusan átkonvertálja hogy ugyanannak tekintse mind kettőt
-console.log(1 === "1");//a három egyenlőségjel a típust nézi, mindkettőnek ugyanaz-e a típusa
+munkatarsak.push(new Munkatars("Kiss Pista", "Egyéni vállalkozó", "kispityu@gmail.com", "https://c.disquscdn.com/uploads/users/14219/5823/avatar92.jpg?1665494834"));
+munkatarsak.push(new Munkatars("Molnár kristóf", "Takarító", "molnarkrissz@freemail.hu", "https://c.disquscdn.com/uploads/users/21901/499/avatar92.jpg?1605381344"));
+munkatarsak.push(new Munkatars("Király Alfréd", "Futár", "kalfred1996@gmail.com", "https://c.disquscdn.com/uploads/users/34385/5600/avatar92.jpg?1580693923"));
+munkatarsak.push(new Munkatars("Liszt Ferenc", "Szakács", "bl@gmail.com", "https://c.disquscdn.com/uploads/users/11538/5316/avatar92.jpg?1615190017"));
+munkatarsak.push(new Munkatars("Trab Antal András", "Vendéglátó", "trabantala@gmail.com", "https://c.disquscdn.com/uploads/users/33819/9553/avatar92.jpg?1695220790"));
+munkatarsak.push(new Munkatars("Balogh Lajos", "Pincér", "trabantala@gmail.com", "https://c.disquscdn.com/uploads/users/7786/8382/avatar92.jpg?1382032686"));
 
-function AllData() 
+function AllWorkers() 
 {
-    fetch("https://pizza.kando-dev.eu/Pizza").then(function(adatok) {
+    fetch("https://pizza.kando-dev.eu/Pizza/").then(function(adatok) {
     return adatok.json();
 }).then(function(adatok) {
     console.log(adatok);
     let contentHTML = document.getElementById("card_with_data");
-    for(let i = 0; i < adatok.length; i++) 
+    for(let i = 0; i < munkatarsak.length; i++) 
     {
         contentHTML.innerHTML += `<div class="card">
         <div class="card-body">
-            <h5 class="card-title">${adatok[i].id}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${adatok[i].name}</h5>
-            <p class="card-text">Glutén mentes: ${adatok[i].isGlutenFree ? "Igen" : "Nem"}</p>
-            <img src="${adatok[i].kepURL}" class="pizza_img">
+            <h5 class="card-title">${munkatarsak[i].nev}</h5>
+            <p class="card-text">Beosztás: ${munkatarsak[i].beosztas}</p>
+            <p class="card-text">Email cím: ${munkatarsak[i].email}</p>
+            <img src="${munkatarsak[i].kep}" class="pizza_img img-thumbnail">
         </div>
     </div>`;
     }
 })
 }
 
-function SingleData(data_id) 
-{
-    fetch("https://www.nodejs.sulla.hu/data" + "/" + data_id).then(function(adatok) {
-    return adatok.json();
-}).then(function(adatok) {
-    
-    let contentHTML = document.getElementById("card_with_data");
-    contentHTML.innerHTML += `<div class="card">
-        <div class="card-body">
-            <h5 class="card-title">${adatok.name}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${adatok.location}</h5>
-            <p class="card-text">Minimum éjszakák: ${adatok.minimum_nights}</p>
-            <p class="card-text">Honlap: ${adatok.hostname}</p>
-            <p class="card-text">Éjszaka / fő: ${adatok.price} Ft</p>
-        </div>
-    </div>`;
-})
-}
+AllWorkers()

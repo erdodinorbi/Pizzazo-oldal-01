@@ -1,7 +1,7 @@
 
 function AllPizzas() 
 {
-    fetch("https://pizza.kando-dev.eu/Pizza").then(function(adatok) {
+    fetch("https://pizza.kando-dev.eu/Pizza/").then(function(adatok) {
     return adatok.json();
 }).then(function(adatok) {
     console.log(adatok);
@@ -13,7 +13,9 @@ function AllPizzas()
             <h5 class="card-title">${adatok[i].id}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${adatok[i].name}</h5>
             <p class="card-text">Glutén mentes: ${adatok[i].isGlutenFree ? "Igen" : "Nem"}</p>
-            <img src="${adatok[i].kepURL}" class="pizza_img">
+            <img src="${adatok[i].kepURL}" class="pizza_img img-thumbnail">
+            <hr>
+            <button class="kosarba">Kosárba</button>
         </div>
     </div>`;
     }
