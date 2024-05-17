@@ -231,11 +231,28 @@ table {
   color: darkgrey;
 }
 
+.admin_button {
+  pointer-events: none;
+  color: indianred;
+}
+
 .privacy_policy {
   border-radius: 3px;
   padding: 50px;
   background-color:azure;
   color:brown;
   z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cart {
+  border-radius: 3px;
+  text-align: center;
+  background-color:azure;
+  color:brown;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }

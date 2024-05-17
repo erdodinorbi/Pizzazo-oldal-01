@@ -3,7 +3,7 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-        <title>Pizzáink - Buci Pizzázó</title>
+        <title>Új Pizza Felvitele - Buci Pizzázó</title>
     </head>
     <style>
         @font-face { font-family: Panpizza; src: url('gfx/fonts/panpizza.ttf'); } 
@@ -11,29 +11,51 @@
     <body>
         <div class="topnav">
             <a href="index.html">Főoldal</a>
-            <a class="active" href="pizzas.html">Pizzáink</a>
+            <a href="pizzas.html">Pizzáink</a>
             <a href="discounts.html">Akciók</a>
             <a href="contact.html">Kapcsolat</a>
             <a href="about.html">Rólunk</a>
             <a href="register.html">Regisztráció</a>
-            <a href="login.html">Bejelentkezés</a>
+            <a class="active" href="login.html">Bejelentkezés</a>
             <a href="cart.html"><p>Kosár</p></a>
             <a href="new_pizza.html"><p class="admin_button disable-links">Admin: Új Pizza Felvitele</p></a>
             <a class="locked_button disable-links"><img src="gfx/logo/pizza_icon_01.png" alt="Buci Pizzázó" title="Buci Pizzázó" style="width: 32px; height: 32px; margin-top: -5px"></a>
             <a style="float: right;"href="aggreement.html">Szerződési Feltételek</a>
         </div>
-
-        <h3 style="font-size:2vw; text-align: center;">Pizzáink:</h2>
-
-        <div id="card_container">
-            <div id="card_with_data">
+        
+        <form action="action_page.php">
+            <div class="container">
+              <h3>Új Pizza Felvitele</h3>
+              <p>Kérem töltse ki ezt az űrlapot az új pizza feltöltéséhez.</p>
+              <hr>
+          
+              <label style="margin: 10px;" for="email"><b>Azonosító Szám</b></label>
+              <input type="number" placeholder="Azonosító Szám" name="email" id="email" required>
+              <br>
+              <label style="margin: 10px;" for="psw"><b>Pizza Megnevezése</b></label>
+              <input type="text" placeholder="Pizza Megnevezése" name="psw" id="psw" required>
+              <br>
+              <label style="margin: 10px;" for="psw"><b>Gluténmentes (Igen/Nem)</b></label>
+              <input type="checkbox" placeholder="Gluténmentes (Igen/Nem)" name="psw" id="psw" required>
+              <br>
+              <label style="margin: 10px;" for="psw"><b>Kép URL Link</b></label>
+              <input type="url" placeholder="Kép URL Link" name="psw" id="psw" required>
+              <hr>
+          
+              
+              <button type="submit" class="loginbtn">Feltöltés</button>
             </div>
-        </div>
-        <div class="footer">
+          
+            
+
+            
+          </form>
+
+        <footer class="footer">
             <a href="https://www.youtube.com"><img src="gfx/logo/youtube.png" width="40" heigth="40" title="YouTube Csatornánk" alt="YouTube Csatornánk"></a>
             <a>Buci Pizzázó. Minden jog fenntartva.</a>
             <a href="https://discord.com/"><img src="gfx/logo/discord.png" width="40" heigth="40" title="Discord Oldalunk" alt="Discord Oldalunk"></a>
-        </div>
-        <script src="script_pizzas.js"></script>
+        </footer>
+        <script src="script_index.js"></script>
     </body>
 </html>
