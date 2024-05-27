@@ -19,7 +19,7 @@ function AllDiscountPizzas()
                 <h5 class="card-title">${adatok[random_discuint_pizza_index].id}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">${adatok[random_discuint_pizza_index].name}</h5>
                 <p class="card-text">Glutén mentes: ${adatok[random_discuint_pizza_index].isGlutenFree ? "Igen" : "Nem"}</p>
-                <img src="${adatok[random_discuint_pizza_index].kepURL}" class="pizza_img img-fluid">
+                <img src="${adatok[random_discuint_pizza_index].kepURL}" class="pizza_img img-thumbnail">
                 <hr>
                 <button class="kosarba">Kosárba</button>
             </div>

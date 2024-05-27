@@ -16,46 +16,44 @@
             <a href="contact.html">Kapcsolat</a>
             <a href="about.html">Rólunk</a>
             <a href="register.html">Regisztráció</a>
-            <a class="active" href="login.html">Bejelentkezés</a>
+            <a href="login.html">Bejelentkezés</a>
             <a href="cart.html"><p>Kosár</p></a>
-            <a href="new_pizza.html"><p class="admin_button disable-links">Admin: Új Pizza Felvitele</p></a>
+            <a class="active" href="new_pizza.html"><p class="admin_button disable-links">Admin: Új Pizza Felvitele</p></a>
             <a class="locked_button disable-links"><img src="gfx/logo/pizza_icon_01.png" alt="Buci Pizzázó" title="Buci Pizzázó" style="width: 32px; height: 32px; margin-top: -5px"></a>
             <a style="float: right;"href="aggreement.html">Szerződési Feltételek</a>
         </div>
         
-        <form action="action_page.php">
+        
             <div class="container">
               <h3>Új Pizza Felvitele</h3>
               <p>Kérem töltse ki ezt az űrlapot az új pizza feltöltéséhez.</p>
               <hr>
           
-              <label style="margin: 10px;" for="email"><b>Azonosító Szám</b></label>
-              <input type="number" placeholder="Azonosító Szám" name="email" id="email" required>
-              <br>
+              
               <label style="margin: 10px;" for="psw"><b>Pizza Megnevezése</b></label>
-              <input type="text" placeholder="Pizza Megnevezése" name="psw" id="psw" required>
+              <input type="text" placeholder="Pizza Megnevezése" name="psw" id="megnevezes_input" required>
               <br>
               <label style="margin: 10px;" for="psw"><b>Gluténmentes (Igen/Nem)</b></label>
-              <input type="checkbox" placeholder="Gluténmentes (Igen/Nem)" name="psw" id="psw" required>
+              <input type="checkbox" placeholder="Gluténmentes (Igen/Nem)" name="psw" id="is_gluten_free_checkbox">
               <br>
               <label style="margin: 10px;" for="psw"><b>Kép URL Link</b></label>
-              <input type="url" placeholder="Kép URL Link" name="psw" id="psw" required>
+              <input type="text" placeholder="Kép URL Link" name="psw" id="kep_url_input" required>
               <hr>
           
               
-              <button type="submit" class="loginbtn">Feltöltés</button>
+              <button type="submit" class="loginbtn" onclick="NewPizzaUpload()">Feltöltés</button>
             </div>
           
             
 
             
-          </form>
+        
 
         <footer class="footer">
             <a href="https://www.youtube.com"><img src="gfx/logo/youtube.png" width="40" heigth="40" title="YouTube Csatornánk" alt="YouTube Csatornánk"></a>
             <a>Buci Pizzázó. Minden jog fenntartva.</a>
             <a href="https://discord.com/"><img src="gfx/logo/discord.png" width="40" heigth="40" title="Discord Oldalunk" alt="Discord Oldalunk"></a>
         </footer>
-        <script src="script_index.js"></script>
+        <script src="script_new_pizza.js"></script>
     </body>
 </html>

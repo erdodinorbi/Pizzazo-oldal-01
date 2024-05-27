@@ -226,6 +226,20 @@ table {
   border-color:gray;
 }
 
+.torles {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(255, 100, 100);
+  border-radius: 3px;
+  border-color:lightgray;
+}
+
+.torles:hover {
+  background-color: red;
+  border-radius: 5px;
+  border-color:gray;
+}
+
 .locked_button {
   pointer-events: none;
   color: darkgrey;

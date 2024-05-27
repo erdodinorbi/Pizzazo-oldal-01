@@ -14,7 +14,7 @@ function AllPopularPizzas()
                 <h5 class="card-title">${adatok[nepszeru_pizzak[i]].id}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">${adatok[nepszeru_pizzak[i]].name}</h5>
                 <p class="card-text">Glutén mentes: ${adatok[nepszeru_pizzak[i]].isGlutenFree ? "Igen" : "Nem"}</p>
-                <img src="${adatok[nepszeru_pizzak[i]].kepURL}" class="pizza_img img-fluid">
+                <img src="${adatok[nepszeru_pizzak[i]].kepURL}" class="pizza_img img-thumbnail">
                 <hr>
                 <button class="kosarba">Kosárba</button>
             </div>

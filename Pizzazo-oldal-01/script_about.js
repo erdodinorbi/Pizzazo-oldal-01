@@ -12,9 +12,9 @@ let munkatarsak = [];
 munkatarsak.push(new Munkatars("Kiss Pista", "Egyéni vállalkozó", "kispityu@gmail.com", "https://c.disquscdn.com/uploads/users/14219/5823/avatar92.jpg?1665494834"));
 munkatarsak.push(new Munkatars("Molnár Kristóf", "Takarító", "molnarkrissz@freemail.hu", "https://c.disquscdn.com/uploads/users/21901/499/avatar92.jpg?1605381344"));
 munkatarsak.push(new Munkatars("Trab Antal András", "Futár", "trabantala@gmail.com", "https://c.disquscdn.com/uploads/users/34385/5600/avatar92.jpg?1580693923"));
-munkatarsak.push(new Munkatars("Liszt Ferenc", "Szakács", "bl@gmail.com", "https://c.disquscdn.com/uploads/users/11538/5316/avatar92.jpg?1615190017"));
+munkatarsak.push(new Munkatars("Liszt Ferenc", "Szakács", "lisztferenc1989@gmail.com", "https://c.disquscdn.com/uploads/users/11538/5316/avatar92.jpg?1615190017"));
 munkatarsak.push(new Munkatars("Király Alfréd", "Vendéglátó", "kalfred1996@gmail.com", "https://c.disquscdn.com/uploads/users/33819/9553/avatar92.jpg?1695220790"));
-munkatarsak.push(new Munkatars("Balogh Lajos", "Pincér", "trabantala@gmail.com", "https://c.disquscdn.com/uploads/users/7786/8382/avatar92.jpg?1382032686"));
+munkatarsak.push(new Munkatars("Balogh Lajos", "Pincér", "bl@freemail.hu", "https://c.disquscdn.com/uploads/users/7786/8382/avatar92.jpg?1382032686"));
 
 function AllWorkers() 
 {

@@ -16,10 +16,26 @@ function AllPizzas()
             <img src="${adatok[i].kepURL}" class="pizza_img img-thumbnail">
             <hr>
             <button class="kosarba">Kosárba</button>
+            <button class="torles" onclick="DeletePizza(${adatok[i].id})">Törlés</button>
         </div>
     </div>`;
+
     }
 })
 }
 
 AllPizzas()
+
+
+function DeletePizza(id) 
+{
+    fetch("https://pizza.kando-dev.eu/Pizza/" + id, {
+        method: "DELETE",
+        headers: {
+            "Content-Type" : "application/json"
+        }
+    })
+    .then(function() {
+        location.reload();
+    })
+}
